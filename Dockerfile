@@ -21,7 +21,7 @@ RUN mkdir install-tl && \
         echo "option_doc 0" && \
         echo "option_src 0" \
     ) > texlive.profile && \
-    install-tl/install-tl --profile texlive.profile
+    install-tl/install-tl --location $TL_MIRROR --profile texlive.profile
 
 FROM redhat/ubi8-micro:latest
 ARG TEXLIVE_DIR
